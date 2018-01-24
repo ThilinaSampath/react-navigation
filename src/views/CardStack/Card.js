@@ -22,11 +22,20 @@ type Props = {
 class Card extends React.Component<Props> {
   render() {
     const { children, pointerEvents, style } = this.props;
+
+    // Fixes an issue on Android whereby talkback/voiceover will pick up elements on a child view that is not active in the stack navigator
+    if(this.props.scene.isActive) {
+      importantForAccessibility='yes';
+    } else {
+      importantForAccessibility='no-hide-descendants';
+    }
+
     return (
       <Animated.View
         pointerEvents={pointerEvents}
         ref={this.props.onComponentRef}
         style={[styles.main, style]}
+        importantForAccessibility={importantForAccessibility}
       >
         {children}
       </Animated.View>

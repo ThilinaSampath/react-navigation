@@ -4,6 +4,8 @@
 
 *Learn once, navigate anywhere.*
 
+# This fixes an issue where by the stack navigator will read out components on inactive screens with voiceover/talkback on Android. It will now only read components with voiceover/talkback on the top screen of the stack navigator.
+
 React Navigation is born from the React Native community's need for an extensible yet easy-to-use navigation solution based on Javascript.
 
 React Navigation is the result of a collaboration between developers from Facebook, Expo and the React community at large: it replaces and improves upon several navigation libraries in the ecosystem, including Ex-Navigation, React Native's Navigator and NavigationExperimental components.

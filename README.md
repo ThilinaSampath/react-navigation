@@ -4,7 +4,12 @@
 
 *Learn once, navigate anywhere.*
 
+
+#### ****
+
 #### This fixes an issue where by the stack navigator will read out components on inactive screens with voiceover/talkback on Android. It will now only read components with voiceover/talkback on the top screen of the stack navigator.
+
+#### ****
 
 React Navigation is born from the React Native community's need for an extensible yet easy-to-use navigation solution based on Javascript.
 

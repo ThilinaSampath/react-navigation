@@ -208,7 +208,7 @@ class TabBarBottom extends React.PureComponent {
       <Animated.View style={animateStyle}>
         <SafeAreaView
           style={tabBarStyle}
-          forceInset={{ bottom: 'always', top: 'never' }}
+          forceInset={{ bottom: 'never', top: 'never' }}
         >
           {routes.map((route, index) => {
             const focused = index === navigation.state.index;

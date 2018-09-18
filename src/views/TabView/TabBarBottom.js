@@ -11,6 +11,7 @@ import SafeAreaView from 'react-native-safe-area-view';
 
 import TabBarIcon from './TabBarIcon';
 import withOrientation from '../withOrientation';
+import { isIphoneX } from 'react-native-iphone-x-helper';
 
 const majorVersion = parseInt(Platform.Version, 10);
 const isIos = Platform.OS === 'ios';
@@ -276,6 +277,8 @@ const styles = StyleSheet.create({
     height: 49,
   },
   tab: {
+    paddingTop: isIphoneX() ? 3 : 0,
+    paddingBottom: isIphoneX() ? 6 : 0,
     flex: 1,
     alignItems: isIos ? 'center' : 'stretch',
   },

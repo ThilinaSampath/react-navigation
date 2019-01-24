@@ -12,8 +12,12 @@ class Card extends React.Component {
     // Fixes an issue on Android whereby talkback/voiceover will pick up elements on a child view that is not active in the stack navigator
     if(this.props.scene.isActive) {
       importantForAccessibility='yes';
+      accessibilityElementsHidden = false;
+
     } else {
       importantForAccessibility='no-hide-descendants';
+      accessibilityElementsHidden = true;
+
     }
 
     return (
@@ -22,6 +26,7 @@ class Card extends React.Component {
         ref={this.props.onComponentRef}
         style={[styles.main, style]}
         importantForAccessibility={importantForAccessibility}
+        accessibilityElementsHidden={accessibilityElementsHidden}
       >
         {children}
       </Animated.View>
